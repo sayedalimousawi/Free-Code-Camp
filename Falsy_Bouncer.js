@@ -3,7 +3,13 @@
 // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
 // Hint: Try converting each value to a Boolean.
 function bouncer(arr) {
-  return arr;
+  let arr2 = [];
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    if (Boolean(element) !== false) {
+      arr2.push(element);
+    }
+  }
+  return arr2;
 }
-
 console.log(bouncer([7, "ate", "", false, 9]));
